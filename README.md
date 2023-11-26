@@ -8,7 +8,7 @@ At PsyControl Lab, we are at the forefront of integrating diverse disciplines su
 ## Installation
 To get started with `PyC_MatricAB`, clone the repository and install the required Python packages:
 ```bash
-git clone https://github.com/PsyControl/PyC_MatricAB.git
+git clone https://github.com/PsyControl/PyC_MatricAB_DMDc.git
 cd PyC_MatricAB
 pip install numpy pandas
 ```
