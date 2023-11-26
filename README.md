@@ -35,7 +35,7 @@ df_AB = PyC_MatricAB(df, id_col, X_cols, U_col, n)
 print(df_AB.head())
 
 # Grouping df by 'Group' and 'entity_ids' and taking the first occurrence
-df_grouped = df.groupby(['Group', 'entity_ids'], as_index=False).first()
+df_grouped = df.groupby(['Group', 'entity_ids'], as_index=False)['entity_ids'].first()
 
 # Merging df_grouped with df_AB on 'entity_ids'
 df_final = df_AB.merge(df_grouped, on='entity_ids')
