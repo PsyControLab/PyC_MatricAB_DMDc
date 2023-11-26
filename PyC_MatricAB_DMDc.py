@@ -63,10 +63,23 @@ def PyC_MatricAB(df, id_col, X_cols, U_col, n):
 #X_cols = df.iloc[:, 2:33].columns.tolist()
 
 # Set the column name of your input variable
-#U_col = 'Happy'  # Replace 'Happy' with the actual column name if different
+#U_col = 'input'  # Replace 'input' with the actual column name if different
 
 # Call the function with the specified parameters
-#df_AB = PyC_MatricAB(df, 'user_id', X_cols, U_col, 28)
+#df_AB = PyC_MatricAB(df, 'entity_ids', X_cols, U_col, 28)
 
 # Display the first three rows of the resulting DataFrame
-#df_AB.head(3)
+#df_AB.head(1)
+
+# Merge the DataFrames based on the "user_id" column
+# Grouping df by 'Group' and 'entity_ids' and taking the first occurrence
+#df_grouped = df.groupby(['Group', 'entity_ids'], as_index=False).first()
+
+# Merging df_grouped with df_AB on 'entity_ids'
+#df_final = df_AB.merge(df_grouped, on='entity_ids')
+
+# Printing the shape of the merged DataFrame
+#print(df_final.shape)
+
+# Displaying the first 3 rows of the merged DataFrame
+#df_final.head(3)
