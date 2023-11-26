@@ -9,7 +9,7 @@ At PsyControl Lab, we are at the forefront of integrating diverse disciplines su
 To get started with `PyC_MatricAB`, clone the repository and install the required Python packages:
 ```bash
 git clone https://github.com/PsyControl/PyC_MatricAB_DMDc.git
-cd PyC_MatricAB
+cd PyC_MatricAB_DMDc
 pip install numpy pandas
 ```
 ## Usage
@@ -17,7 +17,7 @@ The PyC_MatricAB function is user-friendly and can be integrated easily into you
 
 ```python
 import pandas as pd
-from PyC_MatricAB import PyC_MatricAB
+from PyC_MatricAB_DMDc import PyC_MatricAB
 
 # Example: Load your dataset into a pandas DataFrame
 df = pd.read_csv('your_data.csv')
