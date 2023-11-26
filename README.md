@@ -25,7 +25,7 @@ df = pd.read_csv('your_data.csv')
 # Define parameters for the function
 id_col = 'entity_id'  # This should be the name of the column with unique identifiers in your dataset
 X_cols = ['state_var1', 'state_var2', 'state_var3']  # List of columns representing state variables
-U_col = 'input_var'  # Column name for the input variable
+U_col = 'input'  # Column name for the input variable
 n = 28  # The dimension of your state variable (n in A_{n x n})
 
 # Execute the function to calculate the A and B matrices
@@ -33,5 +33,18 @@ df_AB = PyC_MatricAB(df, id_col, X_cols, U_col, n)
 
 # Display the first few rows of the output
 print(df_AB.head())
+
+# Grouping df by 'Group' and 'entity_ids' and taking the first occurrence
+df_grouped = df.groupby(['Group', 'entity_ids'], as_index=False).first()
+
+# Merging df_grouped with df_AB on 'entity_ids'
+df_final = df_AB.merge(df_grouped, on='entity_ids')
+
+# Printing the shape of the merged DataFrame
+print(df_final.shape)
+
+# Displaying the first 3 rows of the merged DataFrame
+df_final.head(3)
+
 ```
 The function processes your data and returns a DataFrame with calculated A and B matrices for each unique entity, providing insights into the system's dynamics.
