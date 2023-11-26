@@ -55,21 +55,20 @@ def PyC_MatricAB(df, id_col, X_cols, U_col, n):
 
     return df_AB
 
-# Example usage:
-# Assuming your DataFrame is loaded into 'df'
-# df = pd.read_csv('your_data.csv') # Load your data
+# Example: Load your dataset into a pandas DataFrame
+#df = pd.read_csv('your_data.csv')
 
-# Use iloc to select columns 3 to 33 for state variables (Python indexing starts from 0)
-#X_cols = df.iloc[:, 2:33].columns.tolist()
+# Define parameters for the function
+#id_col = 'entity_id'  # This should be the name of the column with unique identifiers in your dataset
+#X_cols = ['state_var1', 'state_var2', 'state_var3']  # List of columns representing state variables
+#U_col = 'input'  # Column name for the input variable
+#n = 28  # The dimension of your state variable (n in A_{n x n})
 
-# Set the column name of your input variable
-#U_col = 'input'  # Replace 'input' with the actual column name if different
+# Execute the function to calculate the A and B matrices
+#df_AB = PyC_MatricAB(df, id_col, X_cols, U_col, n)
 
-# Call the function with the specified parameters
-#df_AB = PyC_MatricAB(df, 'entity_ids', X_cols, U_col, 28)
-
-# Display the first three rows of the resulting DataFrame
-#df_AB.head(1)
+# Display the first few rows of the output
+#print(df_AB.head())
 
 # Merge the DataFrames based on the "user_id" column
 # Grouping df by 'Group' and 'entity_ids' and taking the first occurrence
