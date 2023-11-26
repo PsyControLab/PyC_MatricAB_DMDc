@@ -17,7 +17,7 @@ The PyC_MatricAB function is user-friendly and can be integrated easily into you
 
 ```python
 import pandas as pd
-from PyC_MatricAB_DMDc import PyC_MatricAB
+from PyC_MatricAB_DMDc import PyC_MatricAB_DMDc as PyC
 
 # Example: Load your dataset into a pandas DataFrame
 df = pd.read_csv('your_data.csv')
@@ -29,7 +29,7 @@ U_col = 'input'  # Column name for the input variable
 n = 28  # The dimension of your state variable (n in A_{n x n})
 
 # Execute the function to calculate the A and B matrices
-df_AB = PyC_MatricAB(df, id_col, X_cols, U_col, n)
+df_AB = PyC.PyC_MatricAB(df, id_col, X_cols, U_col, n)
 
 # Display the first few rows of the output
 print(df_AB.head())
