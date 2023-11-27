@@ -1,4 +1,4 @@
-# PyC_MatricAB_DMDc
+# PyC_MatricsAB_DMDc
 ## Overview
 Welcome to "PyC_MatricAB", an innovative Python repository created by the PsyControl Lab. Our focus is on analyzing complex systems within the realms of neuroscience and psychology. The centerpiece of this repository is the `PyC_MatricAB` function, which is meticulously designed to calculate A and B matrices in linear time-invariant systems. These calculations are instrumental in dissecting the dynamics of neural networks and psychological states, offering a window into the intricate workings of the human mind and behavior.
 
@@ -8,7 +8,7 @@ At PsyControl Lab, we are at the forefront of integrating diverse disciplines su
 ## Installation
 To get started with `PyC_MatricAB`, clone the repository and install the required Python packages:
 ```bash
-git clone https://github.com/PsyControl/PyC_MatricAB_DMDc.git
+git clone https://github.com/PsyControLab/PyC_MatricAB_DMDc.git
 cd PyC_MatricAB_DMDc
 pip install numpy pandas
 ```
